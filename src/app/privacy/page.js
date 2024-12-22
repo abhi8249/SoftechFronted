@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
               <section>
                 <h2 className="text-base md:text-lg mb-1.5 text-left leading-snug tracking-wide">Web Browser Cookies</h2>
                 <p>
-                  Our Site/Application may use "cookies" to enhance User experience. User's web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of the Site/Application may not function properly.
+                  Our Site/Application may use "cookies" to enhance User experience. User web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of the Site/Application may not function properly.
                 </p>
               </section>
 

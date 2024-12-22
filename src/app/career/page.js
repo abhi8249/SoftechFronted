@@ -21,7 +21,7 @@ export default function Careers() {
       description:
         "Work with cutting-edge technologies and contribute to transformative projects.",
       detailed_description:
-        "Key Responsibilities:\n• Develop and maintain software applications\n• Debug and troubleshoot code issues\n• Write technical documentation\n• Collaborate with cross-functional teams\n\nRequirements:\n• Bachelor's degree in Computer Science or related field\n• Knowledge of programming fundamentals\n• Experience with version control systems\n• Strong analytical skills",
+        "Key Responsibilities:\n• Develop and maintain software applications\n• Debug and troubleshoot code issues\n• Write technical documentation\n• Collaborate with cross-functional teams\n\nRequirements:\n• Bachelor degree in Computer Science or related field\n• Knowledge of programming fundamentals\n• Experience with version control systems\n• Strong analytical skills",
       location: "Remote",
       type: "Full-Time",
       category: "Technology",

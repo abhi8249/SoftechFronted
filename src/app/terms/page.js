@@ -54,10 +54,10 @@ const TermsAndConditions = () => {
             <div className="space-y-4 text-xs leading-relaxed">
               <p>
                 Welcome to SoftTech Solution! These terms and conditions outline
-                the rules and regulations for the use of SoftTech Solution's
+                the rules and regulations for the use of SoftTech Solution
                 Site/Application. By accessing this Site/Application, we assume
                 you accept these terms and conditions in full. Do not continue
-                to use SoftTech Solution's Site/Application if you do not accept
+                to use SoftTech Solution Site/Application if you do not accept
                 all of the terms and conditions stated on this page.
               </p>
 
@@ -132,7 +132,7 @@ const TermsAndConditions = () => {
                   publications, or to other Site/Application information as long
                   as the link: (a) is not misleading; (b) does not falsely imply
                   sponsorship, endorsement, or approval; and (c) fits within the
-                  context of the linking party's site.
+                  context of the linking party site.
                 </p>
               </section>
 
