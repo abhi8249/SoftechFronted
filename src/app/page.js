@@ -31,7 +31,7 @@ const HomePage = () => {
             Services
           </p>
           <h2 className="text-center font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-            Empowering You Through Our Services
+            What We Do?
           </h2>
 
           <ul className="mt-16 grid grid-cols-1 gap-6 text-center text-slate-700 md:grid-cols-3">
@@ -44,12 +44,11 @@ const HomePage = () => {
               />
               <h3 className="my-3 font-display font-medium">Web Design</h3>
               <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                The cutting-edge language model that makes interactions a breeze. With its user-friendly interface,
-                effortlessly tap into the world of AI-generated text.
+              Your website is your digital storefront, and we ensure it leaves a lasting impression. At SofttechIndia, we create responsive, user-friendly, and visually appealing websites that combine aesthetic design with seamless functionality to engage your audience effectively.
               </p>
             </li>
 
-            {/* Feature 2 */}
+            {/* Feature 2
             <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
               <img
                 src="https://images.unsplash.com/photo-1709884732294-90379fee354c?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -61,7 +60,7 @@ const HomePage = () => {
                 Simply input your subject, click the generate button, and the result will appear in seconds just like
                 magic.
               </p>
-            </li>
+            </li> */}
 
             {/* Feature 3 */}
             <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
@@ -72,8 +71,15 @@ const HomePage = () => {
               />
               <h3 className="my-3 font-display font-medium">Digital Marketing</h3>
               <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                We offer advanced customization. You can freely combine options like roles, languages, publish, tones,
-                lengths, and formats.
+              In the competitive online space, standing out is crucial. Our digital marketing services are designed to boost your brand visibility and engage your target audience.
+                Search Engine Optimization (SEO):
+                Boost your website's ranking and drive organic traffic.
+  Social Media Marketing (SMM): 
+  Build a strong presence on platforms like Facebook, Instagram, and LinkedIn.
+  Pay-Per-Click Advertising (PPC):
+  Generate leads and conversions through targeted ad campaigns.
+  Content Marketing: Share compelling content that adds value to your audience and builds brand trust.
+
               </p>
             </li>
 
@@ -89,14 +95,13 @@ const HomePage = () => {
                   Software Development
                 </h3>
                 <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                  We offer a free trial service without login. We provide many payment options including pay-as-you-go
-                  and subscription.
+                We design and develop custom software solutions that streamline operations, enhance productivity, and drive business efficiency. From enterprise applications to scalable cloud-based platforms, we deliver solutions that adapt to your evolving needs.
                 </p>
               </a>
             </li>
 
             {/* Feature 5 */}
-            <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
+            {/* <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
               <a href="/templates" className="group">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -111,10 +116,10 @@ const HomePage = () => {
                   inspire your potential.
                 </p>
               </a>
-            </li>
+            </li> */}
 
             {/* Feature 6 */}
-            <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
+            {/* <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
               <a href="/download" className="group">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -129,7 +134,7 @@ const HomePage = () => {
                   use it anywhere.
                 </p>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </section>

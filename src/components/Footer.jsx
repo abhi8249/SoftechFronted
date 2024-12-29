@@ -1,3 +1,6 @@
+"use-client"
+import ChatWidget from '@/components/ChatWidget';
+
 const Footer = () => {
     return (
       <footer className="bg-[#1A1D2B]">
@@ -120,6 +123,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+<ChatWidget/>
       </footer>
     );
   };
