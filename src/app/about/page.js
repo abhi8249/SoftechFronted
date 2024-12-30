@@ -59,25 +59,40 @@ const AboutPage = () => {
                 <div className="flex gap-2">
                   <span className="font-bold">1.</span>
                   <p>
-                    <span className="font-semibold">Experience and Expertise:</span> With a proven track record and a team of industry experts, we bring unmatched knowledge and skills to every project we undertake.
+                    <span className="font-semibold">
+                      Experience and Expertise:
+                    </span>{" "}
+                    With a proven track record and a team of industry experts,
+                    we bring unmatched knowledge and skills to every project we
+                    undertake.
                   </p>
                 </div>
                 <div className="flex gap-2">
                   <span className="font-bold">2.</span>
                   <p>
-                    <span className="font-semibold">Tailored Solutions:</span> We believe every business is unique. That's why our solutions are customized to align perfectly with your objectives and challenges.
+                    <span className="font-semibold">Tailored Solutions:</span>{" "}
+                    We believe every business is unique. That's why our
+                    solutions are customized to align perfectly with your
+                    objectives and challenges.
                   </p>
                 </div>
                 <div className="flex gap-2">
                   <span className="font-bold">3.</span>
                   <p>
-                    <span className="font-semibold">Focus on Results:</span> We don't just deliver projects; we deliver results. Your success is our measure of achievement.
+                    <span className="font-semibold">Focus on Results:</span> We
+                    don't just deliver projects; we deliver results. Your
+                    success is our measure of achievement.
                   </p>
                 </div>
                 <div className="flex gap-2">
                   <span className="font-bold">4.</span>
                   <p>
-                    <span className="font-semibold">Local Presence, Global Vision:</span> Based in Bhubaneswar, Odisha, we have a deep understanding of local business needs, coupled with the capability to serve clients globally.
+                    <span className="font-semibold">
+                      Local Presence, Global Vision:
+                    </span>{" "}
+                    Based in Bhubaneswar, Odisha, we have a deep understanding
+                    of local business needs, coupled with the capability to
+                    serve clients globally.
                   </p>
                 </div>
               </div>
@@ -165,6 +180,84 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Our Approach Section */}
+        <section className="bg-gray-50 py-8 md:py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8 md:mb-12">
+              Our Approach
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold mb-4">
+                  Client-Centric Philosophy
+                </h3>
+                <p className="text-gray-600">
+                  At SofttechIndia, you are at the heart of everything we do. We
+                  take the time to understand your goals, challenges, and
+                  vision, ensuring every solution we provide is tailored to your
+                  unique needs.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold mb-4">
+                  Innovation and Creativity
+                </h3>
+                <p className="text-gray-600">
+                  Our team thrives on innovation. We continuously explore new
+                  technologies, tools, and strategies to stay ahead of the curve
+                  and deliver solutions that make a difference.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-bold mb-4">
+                  Transparency and Integrity
+                </h3>
+                <p className="text-gray-600">
+                  We value honesty and openness in every collaboration. From
+                  project planning to delivery, we maintain clear communication,
+                  ensuring you are always informed and involved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="container mx-auto px-4 py-8 md:py-16">
+          <h2 className="text-3xl font-bold text-center mb-8 md:mb-12">
+            Why Choose Us?
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Expert Team</h3>
+              <p className="text-gray-600">
+                Our team comprises experienced professionals with expertise in
+                software development, design, and digital marketing.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Customized Solutions</h3>
+              <p className="text-gray-600">
+                We understand that no two businesses are alike. That's why we
+                create bespoke solutions tailored to your requirements.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Proven Track Record</h3>
+              <p className="text-gray-600">
+                Over the years, we've delivered numerous successful projects for
+                clients across industries.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Affordable Excellence</h3>
+              <p className="text-gray-600">
+                We provide world-class services at competitive prices, ensuring
+                maximum ROI for your investment.
+              </p>
+            </div>
+          </div>
+        </section>
         {/* Our Vision Section */}
         <section className="container mx-auto px-4 py-8 md:py-16">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -185,68 +278,6 @@ const AboutPage = () => {
                 alt="Vision illustration"
                 className="rounded-lg shadow-lg w-full max-w-lg"
               />
-            </div>
-          </div>
-        </section>
-
-        {/* Our Approach Section */}
-        <section className="bg-gray-50 py-8 md:py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-8 md:mb-12">
-              Our Approach
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold mb-4">Client-Centric Philosophy</h3>
-                <p className="text-gray-600">
-                  At SofttechIndia, you are at the heart of everything we do. We take the time to understand your goals, challenges, and vision, ensuring every solution we provide is tailored to your unique needs.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold mb-4">Innovation and Creativity</h3>
-                <p className="text-gray-600">
-                  Our team thrives on innovation. We continuously explore new technologies, tools, and strategies to stay ahead of the curve and deliver solutions that make a difference.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold mb-4">Transparency and Integrity</h3>
-                <p className="text-gray-600">
-                  We value honesty and openness in every collaboration. From project planning to delivery, we maintain clear communication, ensuring you are always informed and involved.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us Section */}
-        <section className="container mx-auto px-4 py-8 md:py-16">
-          <h2 className="text-3xl font-bold text-center mb-8 md:mb-12">
-            Why Choose Us?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Expert Team</h3>
-              <p className="text-gray-600">
-                Our team comprises experienced professionals with expertise in software development, design, and digital marketing.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Customized Solutions</h3>
-              <p className="text-gray-600">
-                We understand that no two businesses are alike. That's why we create bespoke solutions tailored to your requirements.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Proven Track Record</h3>
-              <p className="text-gray-600">
-                Over the years, we've delivered numerous successful projects for clients across industries.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Affordable Excellence</h3>
-              <p className="text-gray-600">
-                We provide world-class services at competitive prices, ensuring maximum ROI for your investment.
-              </p>
             </div>
           </div>
         </section>

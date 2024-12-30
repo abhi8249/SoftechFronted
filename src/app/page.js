@@ -3,7 +3,7 @@ import { useState } from "react";
 import NavBar from "../components/NavBar";
 import Slider from "@/components/Slider";
 import About from "@/components/About";
-import React from 'react';
+import React from "react";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 import HappyClients from "@/components/HappyClients";
@@ -12,7 +12,6 @@ import Footer from "@/components/Footer";
 const HomePage = () => {
   return (
     <>
-   
       {/* Hero Section */}
       <div className="heroSlider">
         <Slider />
@@ -44,7 +43,11 @@ const HomePage = () => {
               />
               <h3 className="my-3 font-display font-medium">Web Design</h3>
               <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-              Your website is your digital storefront, and we ensure it leaves a lasting impression. At SofttechIndia, we create responsive, user-friendly, and visually appealing websites that combine aesthetic design with seamless functionality to engage your audience effectively.
+                Your website is your digital storefront, and we ensure it leaves
+                a lasting impression. At SofttechIndia, we create responsive,
+                user-friendly, and visually appealing websites that combine
+                aesthetic design with seamless functionality to engage your
+                audience effectively.
               </p>
             </li>
 
@@ -69,17 +72,34 @@ const HomePage = () => {
                 alt="Custom settings feature"
                 className="mx-auto h-10 w-10"
               />
-              <h3 className="my-3 font-display font-medium">Digital Marketing</h3>
+              <h3 className="my-3 font-display font-medium">
+                Digital Marketing
+              </h3>
               <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-              In the competitive online space, standing out is crucial. Our digital marketing services are designed to boost your brand visibility and engage your target audience.
-                Search Engine Optimization (SEO):
-                Boost your website's ranking and drive organic traffic.
-  Social Media Marketing (SMM): 
-  Build a strong presence on platforms like Facebook, Instagram, and LinkedIn.
-  Pay-Per-Click Advertising (PPC):
-  Generate leads and conversions through targeted ad campaigns.
-  Content Marketing: Share compelling content that adds value to your audience and builds brand trust.
-
+                <ul>
+                  <li>
+                    In the competitive online space, standing out is crucial.
+                    Our digital marketing services are designed to boost your
+                    brand visibility and engage your target audience.
+                  </li>
+                  <li>
+                    <strong>Search Engine Optimization (SEO):</strong> Boost
+                    your website's ranking and drive organic traffic.
+                  </li>
+                  <li>
+                    <strong>Social Media Marketing (SMM):</strong> Build a
+                    strong presence on platforms like Facebook, Instagram, and
+                    LinkedIn.
+                  </li>
+                  <li>
+                    <strong>Pay-Per-Click Advertising (PPC):</strong> Generate
+                    leads and conversions through targeted ad campaigns.
+                  </li>
+                  <li>
+                    <strong>Content Marketing:</strong> Share compelling content
+                    that adds value to your audience and builds brand trust.
+                  </li>
+                </ul>
               </p>
             </li>
 
@@ -95,7 +115,11 @@ const HomePage = () => {
                   Software Development
                 </h3>
                 <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                We design and develop custom software solutions that streamline operations, enhance productivity, and drive business efficiency. From enterprise applications to scalable cloud-based platforms, we deliver solutions that adapt to your evolving needs.
+                  We design and develop custom software solutions that
+                  streamline operations, enhance productivity, and drive
+                  business efficiency. From enterprise applications to scalable
+                  cloud-based platforms, we deliver solutions that adapt to your
+                  evolving needs.
                 </p>
               </a>
             </li>
@@ -142,8 +166,8 @@ const HomePage = () => {
       {/* Work Section */}
       <section className="bg-gray-700 p-12  relative">
         {/* Background gradient */}
-        <div 
-          aria-hidden="true" 
+        <div
+          aria-hidden="true"
           className="absolute inset-0 h-max w-full m-auto grid grid-cols-2 -space-x-52 opacity-20"
         >
           <div className="blur-[106px] h-56 bg-gradient-to-br to-purple-400 from-blue-700" />
@@ -152,27 +176,31 @@ const HomePage = () => {
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
           <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              viewBox="0 0 24 24" 
-              fill="currentColor" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
               className="w-6 h-6 text-secondary"
             >
-              <path 
+              <path
                 fillRule="evenodd"
                 d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
                 clipRule="evenodd"
               />
             </svg>
-            <h2 className="my-8 text-2xl font-bold text-white md:text-4xl">Our Work</h2>
-            <p className="text-gray-300">We have built many products and some of them are below</p>
+            <h2 className="my-8 text-2xl font-bold text-white md:text-4xl">
+              Our Work
+            </h2>
+            <p className="text-gray-300">
+              We have built many products and some of them are below
+            </p>
           </div>
 
           <div className="mt-16 grid divide-x divide-y divide-gray-700 overflow-hidden rounded-3xl border border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
             {/* Work Item 1 */}
             <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
               <div className="relative space-y-8 py-12 p-8">
-                <img 
+                <img
                   src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Xyz.com logo"
                   className="w-12 h-12 rounded-full"
@@ -191,7 +219,7 @@ const HomePage = () => {
             {/* Work Item 2 */}
             <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
               <div className="relative space-y-8 py-12 p-8">
-                <img 
+                <img
                   src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="ABC.com logo"
                   className="w-12 h-12 rounded-full"
@@ -210,7 +238,7 @@ const HomePage = () => {
             {/* Work Item 3 */}
             <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
               <div className="relative space-y-8 py-12 p-8">
-                <img 
+                <img
                   src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="ASD.com logo"
                   className="w-12 h-12 rounded-full"
@@ -220,7 +248,8 @@ const HomePage = () => {
                     ASD.com
                   </h5>
                   <p className="text-gray-300">
-                    API SaaS Platform that provides API Suit to help you ship fast.
+                    API SaaS Platform that provides API Suit to help you ship
+                    fast.
                   </p>
                 </div>
               </div>
@@ -229,7 +258,7 @@ const HomePage = () => {
             {/* Work Item 4 */}
             <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
               <div className="relative space-y-8 py-12 p-8">
-                <img 
+                <img
                   src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="TMK.co logo"
                   className="w-12 h-12 rounded-full"
@@ -246,21 +275,19 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
       </section>
 
       <section className="blog-section">
-        <Blog/>
+        <Blog />
       </section>
 
       <section className="testimonials">
-       <Testimonial/>
+        <Testimonial />
       </section>
 
       <section className="happyclients">
-      <HappyClients/>
+        <HappyClients />
       </section>
-
     </>
   );
 };

@@ -136,7 +136,7 @@ const NavBar = () => {
             <ul>
               <li>
                 <Link
-                  href="/web-design"
+                  href="/webdevelopment"
                   className="block p-3 rounded-lg hover:bg-gray-700"
                 >
                   <div className="font-semibold">Web Design</div>
@@ -145,7 +145,7 @@ const NavBar = () => {
                   </span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/web-development"
                   className="block p-3 rounded-lg hover:bg-gray-700"
@@ -155,10 +155,10 @@ const NavBar = () => {
                     Connect with third-party tools that you're already using.
                   </span>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  href="/digital-marketing"
+                  href="/digitalmarketing"
                   className="block p-3 rounded-lg hover:bg-gray-700"
                 >
                   <div className="font-semibold">Digital Marketing</div>
@@ -171,7 +171,7 @@ const NavBar = () => {
             <ul>
               <li>
                 <Link
-                  href="/software-development"
+                  href="/softwaredevelopment"
                   className="block p-3 rounded-lg hover:bg-gray-700"
                 >
                   <div className="font-semibold">Software Developments</div>
@@ -180,7 +180,7 @@ const NavBar = () => {
                   </span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/graphic-design"
                   className="block p-3 rounded-lg hover:bg-gray-700"
@@ -190,8 +190,8 @@ const NavBar = () => {
                     Connect with third-party tools that you're already using.
                   </span>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   href="/video-editing"
                   className="block p-3 rounded-lg hover:bg-gray-700"
@@ -201,7 +201,7 @@ const NavBar = () => {
                     Connect with third-party tools that you're already using.
                   </span>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
