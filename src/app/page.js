@@ -51,20 +51,6 @@ const HomePage = () => {
               </p>
             </li>
 
-            {/* Feature 2
-            <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
-              <img
-                src="https://images.unsplash.com/photo-1709884732294-90379fee354c?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Easy to use feature"
-                className="mx-auto h-10 w-10"
-              />
-              <h3 className="my-3 font-display font-medium">Web Development</h3>
-              <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                Simply input your subject, click the generate button, and the result will appear in seconds just like
-                magic.
-              </p>
-            </li> */}
-
             {/* Feature 3 */}
             <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
               <img
@@ -75,13 +61,13 @@ const HomePage = () => {
               <h3 className="my-3 font-display font-medium">
                 Digital Marketing
               </h3>
-              <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                <ul>
-                  <li>
-                    In the competitive online space, standing out is crucial.
-                    Our digital marketing services are designed to boost your
-                    brand visibility and engage your target audience.
-                  </li>
+              <div className="mt-1.5 text-sm leading-6 text-secondary-500">
+                <p>
+                  In the competitive online space, standing out is crucial. Our
+                  digital marketing services are designed to boost your brand
+                  visibility and engage your target audience.
+                </p>
+                <ul className="list-disc list-inside">
                   <li>
                     <strong>Search Engine Optimization (SEO):</strong> Boost
                     your website's ranking and drive organic traffic.
@@ -100,7 +86,7 @@ const HomePage = () => {
                     that adds value to your audience and builds brand trust.
                   </li>
                 </ul>
-              </p>
+              </div>
             </li>
 
             {/* Feature 4 */}
@@ -123,42 +109,6 @@ const HomePage = () => {
                 </p>
               </a>
             </li>
-
-            {/* Feature 5 */}
-            {/* <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
-              <a href="/templates" className="group">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Templates feature"
-                  className="mx-auto h-10 w-10"
-                />
-                <h3 className="my-3 font-display font-medium group-hover:text-primary-500">
-                  Graphic Desgin
-                </h3>
-                <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                  We offer many templates covering areas such as writing, education, lifestyle, and creativity to
-                  inspire your potential.
-                </p>
-              </a>
-            </li> */}
-
-            {/* Feature 6 */}
-            {/* <li className="rounded-xl bg-white px-6 py-8 shadow-sm">
-              <a href="/download" className="group">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Use anywhere feature"
-                  className="mx-auto h-10 w-10"
-                />
-                <h3 className="my-3 font-display font-medium group-hover:text-primary-500">
-                  Video Editing
-                </h3>
-                <p className="mt-1.5 text-sm leading-6 text-secondary-500">
-                  Our product is compatible with multiple platforms including Web, Chrome, Windows, and Mac. You can
-                  use it anywhere.
-                </p>
-              </a>
-            </li> */}
           </ul>
         </div>
       </section>

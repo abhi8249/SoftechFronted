@@ -5,8 +5,10 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    "https://thumbs.dreamstime.com/b/internet-information-technology-businessman-hand-showing-concept-75784736.jpg",
-"https://imageio.forbes.com/specials-images/imageserve/6200b0dddcf32d3be937fa84/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "https://vcawebsoft.com/wp-content/uploads/2019/10/slider-home.jpg",
+    "https://w0.peakpx.com/wallpaper/59/567/HD-wallpaper-web-designing-training-in-pune-web-design-web-design-training-in-pune-website-design-training-web-development-course-in-pune-web-development-training-in-india-website-design-training-in-india.jpg",
+    "https://vcawebsoft.com/wp-content/uploads/2019/10/slider-home.jpg",
+    "https://imageio.forbes.com/specials-images/imageserve/6200b0dddcf32d3be937fa84/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
   ];
 
   const nextSlide = () => {
@@ -24,7 +26,7 @@ const Slider = () => {
 
   return (
     <div id="default-carousel" className="relative w-full">
-      <div className="relative w-full h-[400px] md:h-[500px] overflow-hidden rounded-lg">
+      <div className="relative w-full h-[400px] md:h-[650px] overflow-hidden rounded-lg">
         {slides.map((slide, index) => (
           <div
             key={index}
@@ -34,7 +36,7 @@ const Slider = () => {
           >
             <img
               src={slide}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fill"
               alt={`Slide ${index + 1}`}
             />
           </div>

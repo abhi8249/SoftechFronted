@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import "flowbite";
 import Link from "next/link";
+import "flowbite";
 
 const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,24 +22,25 @@ const NavBar = () => {
             className="h-8"
             alt="Flowbite Logo"
           />
-          <span className="text-white self-center text-2xl font-semibold whitespace-nowrap">
+          <span className="text-white text-2xl font-semibold whitespace-nowrap">
             SoftTech
           </span>
         </Link>
+
         <button
-          data-collapse-toggle="mega-menu-full"
+          onClick={toggleDropdown}
           type="button"
           className="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300"
           aria-controls="mega-menu-full"
-          aria-expanded="false"
+          aria-expanded={isDropdownOpen}
         >
           <span className="sr-only">Open main menu</span>
           <svg
             className="w-5 h-5"
-            aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 17 14"
+            aria-hidden="true"
           >
             <path
               stroke="currentColor"
@@ -50,43 +51,43 @@ const NavBar = () => {
             />
           </svg>
         </button>
+
         <div
           id="mega-menu-full"
-          className="bg-navy-blue items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
+          className={`${
+            isDropdownOpen ? "block" : "hidden"
+          } bg-navy-blue items-center justify-between font-medium w-full md:flex md:w-auto md:order-1`}
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
             <li>
               <Link
                 href="/"
                 className="block py-2 px-3 text-white hover:bg-gray-700 rounded md:hover:bg-transparent"
-                aria-current="page"
               >
                 Home
               </Link>
             </li>
-
             <li>
               <Link
                 href="/about"
                 className="block py-2 px-3 text-white hover:bg-gray-700 rounded md:hover:bg-transparent"
-                aria-current="page"
               >
                 About
               </Link>
             </li>
-
             <li>
               <button
                 onClick={toggleDropdown}
                 className="flex items-center justify-between w-full py-2 px-3 text-white rounded md:w-auto hover:bg-gray-700"
+                aria-expanded={isDropdownOpen}
               >
                 Services
                 <svg
                   className="w-2.5 h-2.5 ml-2"
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 10 6"
+                  aria-hidden="true"
                 >
                   <path
                     stroke="currentColor"
@@ -102,7 +103,6 @@ const NavBar = () => {
               <Link
                 href="/blog"
                 className="block py-2 px-3 text-white hover:bg-gray-700 rounded md:hover:bg-transparent"
-                aria-current="page"
               >
                 Blog
               </Link>
@@ -119,7 +119,6 @@ const NavBar = () => {
               <Link
                 href="/career"
                 className="block py-2 px-3 text-white hover:bg-gray-700 rounded md:hover:bg-transparent"
-                aria-current="page"
               >
                 Career
               </Link>
@@ -127,6 +126,7 @@ const NavBar = () => {
           </ul>
         </div>
       </div>
+
       {isDropdownOpen && (
         <div
           id="mega-menu-full-dropdown"
@@ -145,17 +145,6 @@ const NavBar = () => {
                   </span>
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  href="/web-development"
-                  className="block p-3 rounded-lg hover:bg-gray-700"
-                >
-                  <div className="font-semibold">Web Development</div>
-                  <span className="text-sm text-white">
-                    Connect with third-party tools that you're already using.
-                  </span>
-                </Link>
-              </li> */}
               <li>
                 <Link
                   href="/digitalmarketing"
@@ -174,34 +163,12 @@ const NavBar = () => {
                   href="/softwaredevelopment"
                   className="block p-3 rounded-lg hover:bg-gray-700"
                 >
-                  <div className="font-semibold">Software Developments</div>
+                  <div className="font-semibold">Software Development</div>
                   <span className="text-sm text-white">
                     Connect with third-party tools that you're already using.
                   </span>
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  href="/graphic-design"
-                  className="block p-3 rounded-lg hover:bg-gray-700"
-                >
-                  <div className="font-semibold">Graphic Design</div>
-                  <span className="text-sm text-white">
-                    Connect with third-party tools that you're already using.
-                  </span>
-                </Link>
-              </li> */}
-              {/* <li>
-                <Link
-                  href="/video-editing"
-                  className="block p-3 rounded-lg hover:bg-gray-700"
-                >
-                  <div className="font-semibold">Video Editing</div>
-                  <span className="text-sm text-white">
-                    Connect with third-party tools that you're already using.
-                  </span>
-                </Link>
-              </li> */}
             </ul>
           </div>
         </div>
