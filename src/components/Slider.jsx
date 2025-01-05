@@ -20,7 +20,7 @@ const Slider = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 3000); // Automatically change slides every 3 seconds
+    const timer = setInterval(nextSlide, 5000); // Automatically change slides every 3 seconds
     return () => clearInterval(timer); // Cleanup on unmount
   }, []);
 

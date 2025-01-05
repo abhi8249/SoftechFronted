@@ -259,13 +259,13 @@ const AboutPage = () => {
           </div>
         </section>
         {/* Our Vision Section */}
-        <section className="container mx-auto px-4 py-8 md:py-16">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <section className="container mx-auto px-4 py-6 md:py-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-5">
                 Our Vision
               </h2>
-              <p className="text-gray-600 text-base md:text-lg">
+              <p className="text-gray-600 text-sm md:text-base">
                 To be the leading innovator in IT solutions, recognized globally
                 for our commitment to excellence, sustainable practices, and
                 transformative impact on businesses and communities. We envision
@@ -276,7 +276,7 @@ const AboutPage = () => {
               <img
                 src="https://img.freepik.com/vecteurs-premium/concept-creation-entreprise-moderne-conception-visuelle-mot-word-formes-geometriques-abstraites_48369-17746.jpg"
                 alt="Vision illustration"
-                className="rounded-lg shadow-lg w-full max-w-lg"
+                className="rounded-lg shadow-lg w-full max-w-md"
               />
             </div>
           </div>
