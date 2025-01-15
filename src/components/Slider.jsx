@@ -6,8 +6,9 @@ const Slider = () => {
 
   const slides = [
     "https://vcawebsoft.com/wp-content/uploads/2019/10/slider-home.jpg",
+    "https://blog.emb.global/wp-content/uploads/2024/01/20-Emerging-Technologies-That-Will-Change-Our-World.webp",
+    "https://investingnews.com/media-library/robot-hand-touching-human-hand-with-a-spark-in-between.jpg?id=33553684&width=1200&height=800&quality=80&coordinates=0%2C0%2C0%2C1",
     "https://w0.peakpx.com/wallpaper/59/567/HD-wallpaper-web-designing-training-in-pune-web-design-web-design-training-in-pune-website-design-training-web-development-course-in-pune-web-development-training-in-india-website-design-training-in-india.jpg",
-    "https://vcawebsoft.com/wp-content/uploads/2019/10/slider-home.jpg",
     "https://imageio.forbes.com/specials-images/imageserve/6200b0dddcf32d3be937fa84/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
   ];
 

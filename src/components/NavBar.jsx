@@ -2,8 +2,81 @@
 import React, { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
 
+const QuoteForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="space-y-2">
+        <label htmlFor="name" className="block text-sm font-medium">Name</label>
+        <input 
+          id="name" 
+          className="w-full p-2 border rounded-md" 
+          placeholder="Your name" 
+          required 
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="email" className="block text-sm font-medium">Email</label>
+        <input 
+          id="email" 
+          type="email" 
+          className="w-full p-2 border rounded-md" 
+          placeholder="your@email.com" 
+          required 
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="phone" className="block text-sm font-medium">Phone</label>
+        <input 
+          id="phone" 
+          type="tel" 
+          className="w-full p-2 border rounded-md" 
+          placeholder="Your phone number" 
+          required 
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="service" className="block text-sm font-medium">Service Required</label>
+        <select 
+          id="service" 
+          className="w-full p-2 border rounded-md" 
+          required
+        >
+          <option value="">Select a service</option>
+          <option value="web">Web Development</option>
+          <option value="app">App Development</option>
+          <option value="digital">Digital Marketing</option>
+          <option value="software">Software Development</option>
+          <option value="graphic">Graphic Design</option>
+          <option value="ecommerce">E-commerce Solutions</option>
+        </select>
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="message" className="block text-sm font-medium">Project Details</label>
+        <textarea
+          id="message"
+          className="w-full h-32 p-2 border rounded-md"
+          placeholder="Tell us about your project"
+          required
+        />
+      </div>
+      <button 
+        type="submit" 
+        className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+      >
+        Submit Quote Request
+      </button>
+    </form>
+  );
+};
+
 const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState("/");
 
   useEffect(() => {
@@ -31,6 +104,24 @@ const NavBar = () => {
 
   return (
     <nav className="bg-navy-blue border-gray-200">
+      {/* Quote Modal */}
+      {isQuoteModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold">Request a Quote</h2>
+              <button
+                onClick={() => setIsQuoteModalOpen(false)}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                ×
+              </button>
+            </div>
+            <QuoteForm />
+          </div>
+        </div>
+      )}
+
       <div className="flex justify-end px-4 py-2 bg-blue-600">
         <div className="flex gap-6">
           <a href="tel:7657022122" className="flex items-center text-white hover:text-blue-200 transition-colors">
@@ -44,45 +135,55 @@ const NavBar = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-        <a
-          href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <img
-            src="/api/placeholder/32/32"
-            className="h-8"
-            alt="Company Logo"
-          />
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/api/placeholder/32/32" className="h-8" alt="Company Logo" />
           <span className="text-white text-2xl font-semibold whitespace-nowrap">
             SoftTech
           </span>
         </a>
 
-        <button
-          onClick={toggleDropdown}
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg md:hidden hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300"
-          aria-controls="mega-menu-full"
-          aria-expanded={isDropdownOpen}
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-            aria-hidden="true"
+        <div className="flex items-center md:order-2">
+          <button
+            onClick={() => setIsQuoteModalOpen(true)}
+            className="mr-4 py-2 px-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
+            Get a Quote
+          </button>
 
+          <a
+            href="/login"
+            className="py-2 px-4 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            Login
+          </a>
+
+          <button
+            onClick={toggleDropdown}
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg md:hidden hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-300 ml-2"
+            aria-controls="mega-menu-full"
+            aria-expanded={isDropdownOpen}
+          >
+            <span className="sr-only">Open main menu</span>
+            <svg
+              className="w-5 h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+              aria-hidden="true"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Rest of the NavBar component remains the same */}
         <div
           id="mega-menu-full"
           className={`${
@@ -140,12 +241,6 @@ const NavBar = () => {
               </a>
             </li>
           </ul>
-          <a
-                href="/login"
-                className="py-2 mx-4 px-4 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors"
-              >
-                Login
-              </a>
         </div>
       </div>
 
@@ -236,13 +331,9 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-
             </ul>
-           
           </div>
-      
         </div>
-        
       )}
     </nav>
   );

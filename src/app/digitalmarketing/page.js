@@ -12,11 +12,11 @@ const DigitalMarketing = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/80 to-teal-600/80 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Strategic Digital Marketing
+          Let’s Build Your Digital Presence Together
           </h1>
           <p className="text-base md:text-xl max-w-2xl px-4">
-            Drive growth and engagement with data-driven digital marketing
-            strategies that connect with your target audience.
+          Your website is often the first interaction potential customers have with your brand. Make it count with Softtechindia’s professional web designing services. Based in Bhubaneswar, we combine creativity, technology, and strategy to create websites that not only attract but also convert visitors into loyal customers.
+          Get in touch with Softtechindia today to discuss your web designing needs and take the first step towards a stronger online presence. Together, let’s craft a digital experience that sets your business apart!
           </p>
         </div>
       </section>
