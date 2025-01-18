@@ -12,12 +12,12 @@ const GraphicsDesigning = () => {
         />
         <div className="absolute inset-0 bg-blue-900/60 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Graphics Designing Services by Softtechindia: Unleashing the Power
+            Graphics Designing Services by SofttechBharat: Unleashing the Power
             of Visual Communication
           </h1>
           <p className="text-base md:text-xl max-w-2xl px-4">
             In the digital age, powerful visuals are key to creating a lasting
-            impression. At Softtechindia, we offer cutting-edge graphics
+            impression. At SofttechBharat, we offer cutting-edge graphics
             designing services to help businesses stand out. Whether you need
             eye-catching branding materials, engaging social media creatives, or
             captivating website graphics, our team of talented designers is here
@@ -30,7 +30,7 @@ const GraphicsDesigning = () => {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-            Why Choose Softtechindia for Graphics Designing?
+            Why Choose SofttechBharat for Graphics Designing?
           </h2>
           <ul className="space-y-6">
             <li className="flex items-start space-x-4">

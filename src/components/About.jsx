@@ -619,7 +619,7 @@ const About = () => {
                   Make your customers happy by giving services.
                 </h2>
                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
-                At SofttechIndia, we transform ideas into impactful digital solutions. Located in Bhubaneswar, Odisha, we are a leading provider of software development, web design & development, and digital marketing services. Our mission is to empower businesses with cutting-edge technology and creative strategies that drive growth and success in today’s dynamic digital landscape.
+                At SofttechBharat, we transform ideas into impactful digital solutions. Located in Bhubaneswar, Odisha, we are a leading provider of software development, web design & development, and digital marketing services. Our mission is to empower businesses with cutting-edge technology and creative strategies that drive growth and success in today’s dynamic digital landscape.
                 </p>
                 {/* <p className="mb-8 text-base text-body-color dark:text-dark-6">
                   A domain name is one of the first steps to establishing your

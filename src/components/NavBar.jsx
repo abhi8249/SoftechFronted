@@ -277,9 +277,49 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="/sms"
+                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/sms" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">SMS Services</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/whatsapp"
+                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/whatsapp" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">Whatsapp Marketing</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/freewebserv"
+                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/freewebserv" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">Free Website Services</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
             </ul>
             <ul>
               <li>
+                
                 <a
                   href="/softwaredevelopment"
                   className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
@@ -331,6 +371,20 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="/seo"
+                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/seo" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">SEO Services</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
+         
             </ul>
           </div>
         </div>

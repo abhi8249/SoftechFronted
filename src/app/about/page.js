@@ -40,20 +40,20 @@ const AboutPage = () => {
                 Who We Are
               </h2>
               <p className="text-gray-600 text-base md:text-lg mb-6">
-                Welcome to SofttechIndia, your trusted partner in software
+                Welcome to SofttechBharat, your trusted partner in software
                 development, web design & development, and digital marketing.
                 Based in Bhubaneswar, Odisha, we are a passionate team of tech
                 enthusiasts and creative minds dedicated to delivering
                 innovative solutions that drive real results.
               </p>
               <p className="text-gray-600 text-base md:text-lg mb-8">
-                SofttechIndia is a team of skilled professionals passionate
+                SofttechBharat is a team of skilled professionals passionate
                 about delivering excellence in every project. With a commitment
                 to innovation, we craft solutions that are not only functional
                 but also tailored to meet the unique needs of our clients.
               </p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">
-                Why Choose SofttechIndia?
+                Why Choose SofttechBharat?
               </h2>
               <div className="space-y-4 text-gray-600 text-base md:text-lg">
                 <div className="flex gap-2">
@@ -138,7 +138,7 @@ const AboutPage = () => {
               Our Mission
             </h2>
             <p className="text-gray-600 text-base md:text-lg text-center max-w-3xl mx-auto mb-8 md:mb-12">
-              At SofttechIndia, our mission is simple: To create impactful
+              At SofttechBharat, our mission is simple: To create impactful
               digital solutions that empower businesses to grow, thrive, and
               succeed in today's competitive world. We believe that technology
               and creativity go hand in hand, and we strive to bring this
@@ -192,7 +192,7 @@ const AboutPage = () => {
                   Client-Centric Philosophy
                 </h3>
                 <p className="text-gray-600">
-                  At SofttechIndia, you are at the heart of everything we do. We
+                  At SofttechBharat, you are at the heart of everything we do. We
                   take the time to understand your goals, challenges, and
                   vision, ensuring every solution we provide is tailored to your
                   unique needs.

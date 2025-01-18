@@ -12,7 +12,7 @@ const AppDevelopment = () => {
         />
         <div className="absolute inset-0 bg-green-900/60 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            App Development Services at SofttechIndia
+            App Development Services at SofttechBharat
           </h1>
           <p className="text-base md:text-xl max-w-2xl px-4">
             We specialize in building high-performance mobile and web
@@ -80,12 +80,12 @@ const AppDevelopment = () => {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-            Why Choose SofttechIndia for App Development?
+            Why Choose SofttechBharat for App Development?
           </h3>
           <p className="text-gray-600 leading-relaxed mb-6">
             In the rapidly evolving digital age, mobile applications have become
             a cornerstone for businesses to connect with their audiences. At
-            SofttechIndia, a leading App Development company based in
+            SofttechBharat, a leading App Development company based in
             Bhubaneswar, Odisha, we specialize in crafting innovative,
             user-friendly, and high-performing mobile apps that drive success
             and engagement.

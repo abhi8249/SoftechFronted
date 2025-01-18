@@ -12,12 +12,12 @@ const WebDevelopment = () => {
         />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            Web Designing Services by Softtechindia – Crafting Digital
+            Web Designing Services by SofttechBharat – Crafting Digital
             Excellence
           </h1>
           <p className="text-base md:text-xl max-w-2xl px-4">
             In today’s digital-first world, a well-designed website is the
-            cornerstone of a strong online presence. At Softtechindia, we
+            cornerstone of a strong online presence. At SofttechBharat, we
             specialize in delivering innovative and visually stunning web
             designing solutions that drive user engagement and business growth.
             Based in Bhubaneswar, we take pride in being a leading software, web
@@ -34,11 +34,11 @@ const WebDevelopment = () => {
             {/* Content Side */}
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-800">
-                Why Choose Softtechindia for Web Designing?
+                Why Choose SofttechBharat for Web Designing?
               </h2>
               <p className="text-gray-600 leading-relaxed">
                 A website is more than just a digital address; it’s an extension
-                of your brand. At Softtechindia, we create websites that are not
+                of your brand. At SofttechBharat, we create websites that are not
                 only aesthetically pleasing but also functional, responsive, and
                 user-friendly. Our team of experienced designers combines
                 creativity with the latest technologies to deliver tailor-made
