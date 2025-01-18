@@ -138,7 +138,7 @@ const NavBar = () => {
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/api/placeholder/32/32" className="h-8" alt="Company Logo" />
           <span className="text-white text-2xl font-semibold whitespace-nowrap">
-            SoftTech
+            SoftTechBharat
           </span>
         </a>
 

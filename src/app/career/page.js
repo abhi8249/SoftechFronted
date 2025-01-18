@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 
 export default function Careers() {
@@ -20,8 +20,11 @@ export default function Careers() {
     }
   ];
 
+
+  const [selectedCategory, setSelectedCategory] = useState("All Departments");
+  const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedJob, setSelectedJob] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,8 +33,8 @@ export default function Careers() {
     coverLetter: "",
   });
 
-  const handleApply = (option) => {
-    setSelectedOption(option);
+  const handleApply = (job) => {
+    setSelectedJob(job);
     setIsModalOpen(true);
   };
 
@@ -46,7 +49,7 @@ export default function Careers() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Application submitted:", {
-      optionId: selectedOption.id,
+      jobId: selectedJob.id,
       ...formData,
     });
     setIsModalOpen(false);
@@ -59,22 +62,58 @@ export default function Careers() {
     });
   };
 
+
+
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Header Section */}
       <header className="bg-[#13274F] text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Careers at Our Company</h1>
-            <p className="text-lg max-w-2xl mx-auto">
-              Join us in our mission to create exceptional experiences and push the boundaries
-              of innovation. We're looking for passionate individuals ready to make an impact.
+        <div className="container mx-auto flex flex-col items-center px-4 md:flex-row md:justify-between">
+          <div className="md:w-1/2">
+            <h1 className="text-4xl font-bold mb-4">Apply to Work at our Company</h1>
+            <p className="text-lg">
+              Are you eager to push boundaries and create exceptional experiences? If
+              you're passionate about doing work that stands out and makes a real
+              impact, apply to join our team.
             </p>
+          </div>
+          <div className="mt-6 md:mt-0 md:w-1/2 flex justify-center">
+            <img
+              src="https://via.placeholder.com/250"
+              alt="Team Illustration"
+              className="w-64 h-auto"
+            />
           </div>
         </div>
       </header>
 
-      {/* Options Grid */}
+      {/* Sticky Filter Bar */}
+      <div className="sticky top-0 bg-[#13274F]/90 backdrop-blur-md py-4 shadow-md z-10">
+        <div className="container mx-auto flex flex-col items-center px-4 space-y-4 md:flex-row md:space-y-0 md:justify-between">
+          <h2 className="text-lg font-semibold text-white">Jobs at our Company</h2>
+          <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+            <select
+              className="bg-white py-2 px-4 rounded-md border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#13274F]"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              <option>All Departments</option>
+              <option>Technology</option>
+              <option>Marketing</option>
+              <option>Design</option>
+              <option>Management</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Search jobs..."
+              className="bg-white py-2 px-4 rounded-md border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#13274F]"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {options.map((option) => (
@@ -98,12 +137,12 @@ export default function Careers() {
       </div>
 
       {/* Application Modal */}
-      {isModalOpen && selectedOption && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      {isModalOpen && selectedJob && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full p-6">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-2xl font-bold text-[#13274F]">
-                Apply for {selectedOption.title}
+                Apply for {selectedJob.title}
               </h2>
               <button
                 onClick={() => setIsModalOpen(false)}
