@@ -55,10 +55,11 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-<ServicesSection/>
+      <ServicesSection />
 
       {/* Work Section */}
-      <section className="bg-gray-700 p-12  relative">
+      {/* Work Section */}
+      <section className="bg-gray-700 p-4 relative">
         {/* Background gradient */}
         <div
           aria-hidden="true"
@@ -68,8 +69,8 @@ const HomePage = () => {
           <div className="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-indigo-600" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
-          <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 xl:px-4">
+          <div className="md:w-2/3 lg:w-1/2 mt-8 text-gray-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -82,7 +83,7 @@ const HomePage = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <h2 className="my-8 text-2xl font-bold text-white md:text-4xl">
+            <h2 className="my-6 text-2xl font-bold text-white md:text-3xl">
               Our Work
             </h2>
             <p className="text-gray-300">
@@ -90,83 +91,30 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="mt-16 grid divide-x divide-y divide-gray-700 overflow-hidden rounded-3xl border border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
-            {/* Work Item 1 */}
-            <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Xyz.com logo"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div className="space-y-2">
-                  <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">
-                    Xyz.com
-                  </h5>
-                  <p className="text-gray-300">
-                    Platform to convert Domains into Content websites.
-                  </p>
+          <div className="mt-12 grid divide-x divide-y divide-gray-700 overflow-hidden rounded-3xl border border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
+            {/* Work Item */}
+            {[1, 2, 3, 4].map((_, index) => (
+              <div
+                key={index}
+                className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10"
+              >
+                <div className="relative space-y-4 py-8 px-6">
+                  <img
+                    src={`https://via.placeholder.com/48`}
+                    alt={`Work Item ${index + 1}`}
+                    className="w-12 h-12 rounded-full"
+                  />
+                  <div className="space-y-1">
+                    <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">
+                      Work Item {index + 1}
+                    </h5>
+                    <p className="text-gray-300 text-sm">
+                      Description for work item {index + 1}.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Work Item 2 */}
-            <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="ABC.com logo"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div className="space-y-2">
-                  <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">
-                    ABC.com
-                  </h5>
-                  <p className="text-gray-300">
-                    Platform to create dynamic widgets for websites.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Work Item 3 */}
-            <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="ASD.com logo"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div className="space-y-2">
-                  <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">
-                    ASD.com
-                  </h5>
-                  <p className="text-gray-300">
-                    API SaaS Platform that provides API Suit to help you ship
-                    fast.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Work Item 4 */}
-            <div className="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-              <div className="relative space-y-8 py-12 p-8">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1661889099855-b44dc39e88c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="TMK.co logo"
-                  className="w-12 h-12 rounded-full"
-                />
-                <div className="space-y-2">
-                  <h5 className="text-xl font-semibold text-white transition group-hover:text-secondary">
-                    TMK.co
-                  </h5>
-                  <p className="text-gray-300">
-                    Chrome Extension that lets you add ChatGPT on any website
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
