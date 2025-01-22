@@ -51,7 +51,7 @@ const Footer = () => {
               <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                 <div className="md:grid md:grid-cols-2 md:gap-8">
                   <div>
-                    <h3 className="text-md font-semibold leading-6 text-white">Our Solutions</h3>
+                    <h3 className="text-md font-semibold leading-6 text-white">Our Services</h3>
                     <ul role="list" className="mt-6 space-y-4">
                       <li>
                         <a href="/aiplatform" className="text-md leading-6 text-gray-300 hover:text-gray-50">AI Platform</a>
