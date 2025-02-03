@@ -293,6 +293,19 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
+              <li className="border border-gray-400 rounded-lg overflow-hidden">
+                <a
+                  href="/webdevelopment"
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/webdevelopment" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">E-commerce Website Development</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
               <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/sms"
@@ -347,6 +360,19 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
+              <li className="border border-gray-400 rounded-lg overflow-hidden">
+                <a
+                  href="/webdevelopment"
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/webdevelopment" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">Web Development</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
               <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/appdevelopment"
@@ -394,6 +420,19 @@ const NavBar = () => {
                   }`}
                 >
                   <div className="font-semibold">SEO Services</div>
+                  <span className="text-sm text-white">
+                    Connect with third-party tools that you're already using.
+                  </span>
+                </a>
+              </li>
+              <li className="border border-gray-400 rounded-lg overflow-hidden">
+                <a
+                  href="/webdevelopment"
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
+                    currentPath === "/webdevelopment" ? "bg-blue-600" : ""
+                  }`}
+                >
+                  <div className="font-semibold">Web Site Maintenance </div>
                   <span className="text-sm text-white">
                     Connect with third-party tools that you're already using.
                   </span>

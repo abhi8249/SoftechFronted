@@ -104,6 +104,14 @@ const Footer = () => {
                         Digital Marketing
                       </a>
                     </li>
+                    <li>
+                      <a
+                        href="/webdevelopment"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        Web Development
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div className="mt-10 md:mt-0">
@@ -111,6 +119,22 @@ const Footer = () => {
                     Our Services
                   </h3>
                   <ul className="mt-6 space-4-4">
+                    <li>
+                      <a
+                        href="/webdevelopment"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        Web Site Maintenance
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/webdevelopment"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        E-Commerce Website Development
+                      </a>
+                    </li>
                     <li>
                       <a
                         href="/seo-optimization"

@@ -33,6 +33,24 @@ export default function ServicesSection() {
       url: "/appdevelopment"
     },
     {
+      title: "Web Development",
+      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
+      description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
+      url: "/webdevelopment"
+    },
+    {
+      title: "Web Site Maintenance",
+      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
+      description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
+      url: "/webdevelopment"
+    },
+    {
+      title: "E-Commerce Website Development",
+      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
+      description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
+      url: "/webdevelopment"
+    },
+    {
       title: "Graphics Designing",
       icon: "https://www.zica-borivali.com/images/graphic-design-course-in-borivali-mumbai.jpg",
       description: "Brand identity design, marketing materials, UI/UX design, and print design services to bring your brand vision to life.",

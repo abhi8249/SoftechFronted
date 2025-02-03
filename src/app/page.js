@@ -9,6 +9,7 @@ import Testimonial from "@/components/Testimonial";
 import HappyClients from "@/components/HappyClients";
 import Footer from "@/components/Footer";
 import ServicesSection from "@/components/Services";
+import BenefitsAndIndustries from "@/components/BenefitsIndustry";
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -128,89 +129,7 @@ const HomePage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-white px-4 py-10">
-        <div id="benefits" className="mx-auto max-w-6xl text-center">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-            Benefits of Partnering with SofttechBharat
-          </h2>
-          <ul className="mt-6 space-y-4 text-lg text-gray-700">
-            <li className="flex items-start space-x-3">
-              <span className="inline-block bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
-                ✓
-              </span>
-              <p>
-                <strong>Enhanced Business Reach:</strong> Mobile apps developed
-                by us help you connect with a broader audience, ensuring better
-                engagement and customer retention.
-              </p>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="inline-block bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
-                ✓
-              </span>
-              <p>
-                <strong>Improved Brand Recognition:</strong> A well-designed app
-                enhances your brand image and creates a lasting impression on
-                users.
-              </p>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="inline-block bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
-                ✓
-              </span>
-              <p>
-                <strong>Increased Revenue Opportunities:</strong> By offering
-                seamless and engaging user experiences, our apps help convert
-                visitors into loyal customers.
-              </p>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="inline-block bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
-                ✓
-              </span>
-              <p>
-                <strong>Seamless Integration:</strong> We ensure your app
-                integrates effortlessly with existing systems and third-party
-                services.
-              </p>
-            </li>
-            <li className="flex items-start space-x-3">
-              <span className="inline-block bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center">
-                ✓
-              </span>
-              <p>
-                <strong>Reliable Support:</strong> Our team provides 24/7
-                support and timely updates to keep your app running efficiently.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Industries We Serve Section */}
-      <section className="bg-white py-10 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-800">
-            Industries We Serve
-          </h2>
-          <p className="mt-4 text-gray-600">
-            Over the years, SofttechBharat has worked with diverse industries,
-            including:
-          </p>
-          <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 text-gray-700">
-            <li>E-commerce</li>
-            <li>Healthcare</li>
-            <li>Education</li>
-            <li>Real Estate</li>
-            <li>Travel & Tourism</li>
-            <li>Hospitality</li>
-          </ul>
-          <p className="mt-6 text-gray-600">
-            Whether you’re a startup or an established business, we have the
-            expertise to cater to your specific needs.
-          </p>
-        </div>
-      </section>
+<BenefitsAndIndustries/>
     </>
   );
 };
