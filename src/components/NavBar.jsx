@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
 
@@ -11,41 +11,45 @@ const QuoteForm = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
-        <label htmlFor="name" className="block text-sm font-medium">Name</label>
-        <input 
-          id="name" 
-          className="w-full p-2 border rounded-md" 
-          placeholder="Your name" 
-          required 
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="email" className="block text-sm font-medium">Email</label>
-        <input 
-          id="email" 
-          type="email" 
-          className="w-full p-2 border rounded-md" 
-          placeholder="your@email.com" 
-          required 
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="phone" className="block text-sm font-medium">Phone</label>
-        <input 
-          id="phone" 
-          type="tel" 
-          className="w-full p-2 border rounded-md" 
-          placeholder="Your phone number" 
-          required 
-        />
-      </div>
-      <div className="space-y-2">
-        <label htmlFor="service" className="block text-sm font-medium">Service Required</label>
-        <select 
-          id="service" 
-          className="w-full p-2 border rounded-md" 
+        <label htmlFor="name" className="block text-sm font-medium">
+          Name
+        </label>
+        <input
+          id="name"
+          className="w-full p-2 border rounded-md"
+          placeholder="Your name"
           required
-        >
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="email" className="block text-sm font-medium">
+          Email
+        </label>
+        <input
+          id="email"
+          type="email"
+          className="w-full p-2 border rounded-md"
+          placeholder="your@email.com"
+          required
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="phone" className="block text-sm font-medium">
+          Phone
+        </label>
+        <input
+          id="phone"
+          type="tel"
+          className="w-full p-2 border rounded-md"
+          placeholder="Your phone number"
+          required
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="service" className="block text-sm font-medium">
+          Service Required
+        </label>
+        <select id="service" className="w-full p-2 border rounded-md" required>
           <option value="">Select a service</option>
           <option value="web">Web Development</option>
           <option value="app">App Development</option>
@@ -56,7 +60,9 @@ const QuoteForm = () => {
         </select>
       </div>
       <div className="space-y-2">
-        <label htmlFor="message" className="block text-sm font-medium">Project Details</label>
+        <label htmlFor="message" className="block text-sm font-medium">
+          Project Details
+        </label>
         <textarea
           id="message"
           className="w-full h-32 p-2 border rounded-md"
@@ -64,8 +70,8 @@ const QuoteForm = () => {
           required
         />
       </div>
-      <button 
-        type="submit" 
+      <button
+        type="submit"
         className="w-full py-2 px-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
       >
         Submit Quote Request
@@ -84,9 +90,9 @@ const NavBar = () => {
     const handleLocationChange = () => {
       setCurrentPath(window.location.pathname);
     };
-    window.addEventListener('popstate', handleLocationChange);
+    window.addEventListener("popstate", handleLocationChange);
     return () => {
-      window.removeEventListener('popstate', handleLocationChange);
+      window.removeEventListener("popstate", handleLocationChange);
     };
   }, []);
 
@@ -124,11 +130,17 @@ const NavBar = () => {
 
       <div className="flex justify-end px-4 py-2 bg-blue-600">
         <div className="flex gap-6">
-          <a href="tel:7657022122" className="flex items-center text-white hover:text-blue-200 transition-colors">
+          <a
+            href="tel:7657022122"
+            className="flex items-center text-white hover:text-blue-200 transition-colors"
+          >
             <Phone size={16} className="mr-2" />
             <span>+91 7657022122</span>
           </a>
-          <a href="tel:7978870125" className="flex items-center text-white hover:text-blue-200 transition-colors">
+          <a
+            href="tel:7978870125"
+            className="flex items-center text-white hover:text-blue-200 transition-colors"
+          >
             <Phone size={16} className="mr-2" />
             <span>+91 7978870125</span>
           </a>
@@ -136,7 +148,11 @@ const NavBar = () => {
       </div>
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="/api/placeholder/32/32" className="h-8" alt="Company Logo" />
+          <img
+            src="/api/placeholder/32/32"
+            className="h-8"
+            alt="Company Logo"
+          />
           <span className="text-white text-2xl font-semibold whitespace-nowrap">
             SoftTechBharat
           </span>
@@ -247,14 +263,14 @@ const NavBar = () => {
       {isDropdownOpen && (
         <div
           id="mega-menu-full-dropdown"
-          className="mt-1 border-gray-200 shadow-sm bg-navy-blue text-white"
+          className="mt-1 shadow-sm bg-navy-blue text-white"
         >
-          <div className="grid max-w-screen-xl px-4 py-5 mx-auto sm:grid-cols-2">
-            <ul>
-              <li>
+          <div className="grid max-w-screen-xl px-4 py-5 mx-auto sm:grid-cols-2 gap-4">
+            <ul className="space-y-3">
+              <li className="border border-gray-400 rounded-lg overflow-hidden">
                 <a
                   href="/webdevelopment"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/webdevelopment" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -264,10 +280,10 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/digitalmarketing"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/digitalmarketing" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -277,10 +293,10 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/sms"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/sms" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -290,10 +306,10 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/whatsapp"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/whatsapp" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -303,10 +319,10 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/freewebserv"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/freewebserv" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -317,12 +333,11 @@ const NavBar = () => {
                 </a>
               </li>
             </ul>
-            <ul>
-              <li>
-                
+            <ul className="space-y-3">
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/softwaredevelopment"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/softwaredevelopment" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -332,10 +347,10 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/appdevelopment"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/appdevelopment" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -345,36 +360,36 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/graphicdesgin"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/graphicdesgin" ? "bg-blue-600" : ""
                   }`}
                 >
-                  <div className="font-semibold">Graphic desgin</div>
+                  <div className="font-semibold">Graphic Design</div>
                   <span className="text-sm text-white">
                     Connect with third-party tools that you're already using.
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/ecommerce"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/ecommerce" ? "bg-blue-600" : ""
                   }`}
                 >
-                  <div className="font-semibold">Ecommerce solutions</div>
+                  <div className="font-semibold">Ecommerce Solutions</div>
                   <span className="text-sm text-white">
                     Connect with third-party tools that you're already using.
                   </span>
                 </a>
               </li>
-              <li>
+              <li className="border border-gray-400 rounded-lg">
                 <a
                   href="/seo"
-                  className={`block p-3 rounded-lg hover:bg-blue-500 transition-colors duration-200 ${
+                  className={`block p-4 hover:bg-blue-500 transition-colors duration-200 ${
                     currentPath === "/seo" ? "bg-blue-600" : ""
                   }`}
                 >
@@ -384,7 +399,6 @@ const NavBar = () => {
                   </span>
                 </a>
               </li>
-         
             </ul>
           </div>
         </div>

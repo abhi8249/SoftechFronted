@@ -4,7 +4,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden pt-15 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden pt-10 pb-8 lg:pt-[80px] lg:pb-[60px] bg-white dark:bg-dark">
         <div className="container mx-auto w-[70%]">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -608,24 +608,97 @@ const About = () => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="mt-10 lg:mt-0">
-              <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
-                Build your free website 
+              <div className="mt-8 lg:mt-0">
+                <div className="relative inline-block mb-4">
+                  <span className="block mb-4 text-lg font-semibold text-primary">
+                    Why Choose Us
+                  </span>
+                  <div className="absolute -top-3 -right-6">
+                    <svg
+                      className="w-8 h-8 text-yellow-400 animate-pulse"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <h2 className="mb-5 text-4xl font-extrabold leading-tight dark:text-white relative">
+                  {/* Animated background elements */}
+                  <div className="absolute -top-16 -left-16 w-48 h-48 bg-purple-500/10 rounded-full mix-blend-multiply filter blur-2xl animate-pulse"></div>
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-500/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-75"></div>
+
+                  <span className="relative z-10">
+                    {/* Main heading with shimmer effect */}
+                    <span className="relative inline-block">
+                      <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-transparent bg-clip-text animate-gradient">
+                        Build Your Free Website
+                      </span>
+                      <span className="absolute inset-0 bg-gradient-to-r from-white/30 to-transparent opacity-20 animate-shimmer" />
+                    </span>
+
+                    {/* Animated decoration elements */}
+                    <span className="absolute -right-10 -top-6 animate-float">
+                      <svg
+                        className="w-16 h-16 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                      {/* Small surrounding stars */}
+                      <div className="absolute top-0 left-0 w-full h-full animate-twinkle">
+                        {[...Array(3)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute w-2 h-2 bg-white rounded-full"
+                            style={{
+                              top: `${Math.random() * 80}%`,
+                              left: `${Math.random() * 80}%`,
+                              animationDelay: `${i * 0.5}s`,
+                            }}
+                          />
+                        ))}
+                      </div>
+                    </span>
+                  </span>
+
+                  {/* Enhanced subheading with animated border */}
+                  <div className="mt-6 relative inline-block px-6 py-3 rounded-full group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300" />
+                    <div className="absolute inset-0 border-2 border-dashed border-white/30" />
+
+                    <div className="relative flex items-center gap-3 text-2xl font-bold sm:text-3xl">
+                      <span className="animate-bounce inline-block">
+                        <svg
+                          className="w-8 h-8 text-orange-400 animate-flame"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M13 14.725c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275zm-13 0c0-5.141 3.892-10.519 10-11.725l.984 2.126c-2.215.835-4.163 3.742-4.38 5.746 2.491.392 4.396 2.547 4.396 5.149 0 3.182-2.584 4.979-5.199 4.979-3.015 0-5.801-2.305-5.801-6.275z" />
+                        </svg>
+                      </span>
+                      <span className="animate-bounce">🚀</span>
+                      <span className="bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-black">
+                        Launch Your Digital Presence
+                      </span>
+                      <span className="animate-spin-slow">✨</span>
+                      <span className="animate-ping-slow inline-block w-6 h-6 bg-purple-500 rounded-full" />
+                    </div>
+                  </div>
                 </h2>
-                <span className="block mb-4 text-lg font-semibold text-primary">
-                  Why Choose Us
-                </span>
-                <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
-                  Make your customers happy by giving services.
-                </h2>
+
                 <p className="mb-5 text-base text-body-color dark:text-dark-6">
-                At SofttechBharat, we transform ideas into impactful digital solutions. Located in Bhubaneswar, Odisha, we are a leading provider of software development, web design & development, and digital marketing services. Our mission is to empower businesses with cutting-edge technology and creative strategies that drive growth and success in today’s dynamic digital landscape.
+                  At SofttechBharat, we transform ideas into impactful digital
+                  solutions. Located in Bhubaneswar, Odisha, we are a leading
+                  provider of software development, web design & development,
+                  and digital marketing services. Our mission is to empower
+                  businesses with cutting-edge technology and creative
+                  strategies that drive growth and success in today’s dynamic
+                  digital landscape.
                 </p>
-                {/* <p className="mb-8 text-base text-body-color dark:text-dark-6">
-                  A domain name is one of the first steps to establishing your
-                  brand. Secure a consistent brand image with a domain name that
-                  matches your business.
-                </p> */}
+
                 <Link
                   href="/about"
                   className="inline-flex items-center justify-center py-3 text-base font-medium text-center text-white border border-transparent rounded-md px-7 bg-primary hover:bg-opacity-90"

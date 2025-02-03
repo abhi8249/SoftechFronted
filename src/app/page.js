@@ -49,7 +49,7 @@ const HomePage = () => {
       </div>
 
       {/* About Section */}
-      <section className="text-center mt-8 mb-0">
+      <section className="text-center mt-2 mb-0">
         <h1 className="text-4xl">About Us</h1>
         <About />
       </section>

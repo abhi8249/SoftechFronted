@@ -104,6 +104,13 @@ const Footer = () => {
                         Digital Marketing
                       </a>
                     </li>
+                  </ul>
+                </div>
+                <div className="mt-10 md:mt-0">
+                  <h3 className="text-md font-semibold leading-6 text-white">
+                    Our Services
+                  </h3>
+                  <ul className="mt-6 space-4-4">
                     <li>
                       <a
                         href="/seo-optimization"
@@ -134,37 +141,6 @@ const Footer = () => {
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Custom Software Development
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="mt-10 md:mt-0">
-                  <h3 className="text-md font-semibold leading-6 text-white">
-                    Use Cases
-                  </h3>
-                  <ul role="list" className="mt-6 space-y-4">
-                    <li>
-                      <a
-                        href="/predictiveanalysis"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        Predictive Analysis
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/customerexperience"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        Customer Experience
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/automation"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        Automation
                       </a>
                     </li>
                   </ul>
