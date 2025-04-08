@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 const About = () => {
@@ -12,14 +11,14 @@ const About = () => {
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
                     <img
-                      src="https://i.ibb.co/gFb3ns6/image-1.jpg"
+                      src="https://images.ctfassets.net/pdf29us7flmy/4ubcyzCmhrPeZe5upVZI9y/56aca4bcb3f55cd5a4bedc847872aee5/GettyImages-890837584-edited.jpg?w=720&q=100&fm=jpg"
                       alt=""
                       className="w-full rounded-2xl"
                     />
                   </div>
                   <div className="py-3 sm:py-4">
                     <img
-                      src="https://i.ibb.co/rfHFq15/image-2.jpg"
+                      src="https://media.istockphoto.com/id/1409517527/photo/female-financial-advisor-meets-with-unrecognizable-female-client.jpg?s=612x612&w=0&k=20&c=C5p1A3nDt17xzHBpOzUtRLGqSEF_TqTX8T1AQN4S6Ac="
                       alt=""
                       className="w-full rounded-2xl"
                     />
@@ -28,7 +27,7 @@ const About = () => {
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
                     <img
-                      src="https://i.ibb.co/9y7nYCD/image-3.jpg"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXZsT5jAsr5Ky218Y5RaPUYK7T0l5k0qYm252ya814-N-DFz-pJm_ml5eBm2SbzyFXuQ&usqp=CAU"
                       alt=""
                       className="w-full rounded-2xl"
                     />

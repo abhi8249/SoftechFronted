@@ -1,20 +1,17 @@
 "use client";
-import { useState, useEffect } from "react";
-import NavBar from "../components/NavBar";
-import Slider from "@/components/Slider";
 import About from "@/components/About";
-import React from "react";
-import Blog from "@/components/Blog";
-import Testimonial from "@/components/Testimonial";
-import HappyClients from "@/components/HappyClients";
-import Footer from "@/components/Footer";
-import ServicesSection from "@/components/Services";
 import BenefitsAndIndustries from "@/components/BenefitsIndustry";
+import Blog from "@/components/Blog";
+import ServicesSection from "@/components/Services";
+import Slider from "@/components/Slider";
+import Testimonial from "@/components/Testimonial";
+import { useEffect, useState } from "react";
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
+    document.title = "Software company in Bhubaneswar | SofttechBharat", "Software company in Odisha | SofttechBharat","Software company in India | SofttechBharat";
     const timer = setTimeout(() => {
       setShowPopup(true);
     }, 1000);

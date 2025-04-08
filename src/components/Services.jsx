@@ -1,86 +1,120 @@
-import React from 'react';
+import { useEffect, useRef } from "react";
 
 export default function ServicesSection() {
+  const scrollContainerRef = useRef(null);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const distance = 1; // pixels to scroll per interval (adjust for speed)
+
+    const autoScroll = () => {
+      scrollContainer.scrollLeft += distance;
+      scrollAmount += distance;
+
+      // When reaching the end, reset to the beginning
+      if (
+        scrollAmount >=
+        scrollContainer.scrollWidth - scrollContainer.clientWidth
+      ) {
+        scrollContainer.scrollLeft = 0;
+        scrollAmount = 0;
+      }
+    };
+
+    // Set interval for smooth scrolling
+    const scrollInterval = setInterval(autoScroll, 30);
+
+    // Clean up on component unmount
+    return () => {
+      clearInterval(scrollInterval);
+    };
+  }, []);
+
   const services = [
     {
       title: "Web Design",
-      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
+      icon: "https://images.pexels.com/photos/6476584/pexels-photo-6476584.jpeg?auto=compress&cs=tinysrgb&w=600",
       description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
       url: "/webdevelopment"
     },
     {
       title: "Digital Marketing",
-      icon: "https://onlinegurukul.org/storage/uploads/1658492516-dm.jpeg",
+      icon: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
       description: "Comprehensive digital marketing services including SEO, social media marketing, PPC advertising, and content marketing.",
-      url: "digitalmarketing"
+      url: "/digitalmarketing"
     },
     {
       title: "Software Development",
-      icon: "https://cdn.thenewstack.io/media/2024/04/d95c0cd2-roles-in-software-development-1024x588.png",
+      icon: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600",
       description: "Custom software solutions that streamline operations, enhance productivity, and drive business efficiency.",
       url: "/softwaredevelopment"
     },
     {
       title: "Ecommerce Solutions",
-      icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSITiUDIxOHORHKvxMsniK1j8Bwfpmd0sLROg&s",
+      icon: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=600",
       description: "Powerful online stores with seamless shopping experiences, secure payment gateways, and inventory management.",
       url: "/ecommerce"
     },
     {
       title: "App Development",
-      icon: "https://www.volumetree.com/wp-content/uploads/2019/11/App-development-process-Feature-image.jpg",
+      icon: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600",
       description: "Native and cross-platform mobile applications for iOS and Android, focusing on performance and user experience.",
       url: "/appdevelopment"
     },
     {
       title: "Web Development",
-      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
-      description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
+      icon: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Responsive websites with aesthetic design and seamless user experience.",
       url: "/webdevelopment"
     },
     {
-      title: "Web Site Maintenance",
-      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
-      description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
-      url: "/webdevelopment"
+      title: "Website Maintenance",
+      icon: "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Keep your website running smoothly with regular updates, backups, and monitoring.",
+      url: "/webmaintenance"
     },
     {
       title: "E-Commerce Website Development",
-      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
-      description: "Creating responsive, user-friendly websites that combine aesthetic design with seamless functionality to engage your audience effectively.",
-      url: "/webdevelopment"
+      icon: "https://images.pexels.com/photos/3790836/pexels-photo-3790836.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Custom e-commerce development with optimized performance and secure transactions.",
+      url: "/ecommerce"
     },
     {
       title: "Graphics Designing",
-      icon: "https://www.zica-borivali.com/images/graphic-design-course-in-borivali-mumbai.jpg",
-      description: "Brand identity design, marketing materials, UI/UX design, and print design services to bring your brand vision to life.",
+      icon: "https://images.pexels.com/photos/709790/pexels-photo-709790.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Design services including branding, print, UI/UX, and visual identity.",
       url: "/graphicsdesign"
     },
     {
       title: "SMS Services",
-      icon: "https://www.zica-borivali.com/images/graphic-design-course-in-borivali-mumbai.jpg",
-      description: "Bulk SMS marketing solutions for reaching your customers instantly with promotional messages and updates.",
-      url: "/services/sms-services"
+      icon: "https://images.pexels.com/photos/4050296/pexels-photo-4050296.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Bulk SMS services to reach your audience instantly and efficiently.",
+      url: "/sms"
     },
     {
       title: "WhatsApp Marketing",
-      icon: "https://www.zica-borivali.com/images/graphic-design-course-in-borivali-mumbai.jpg",
-      description: "Professional WhatsApp business solutions for engaging customers through broadcasts and promotional campaigns.",
-      url: "/services/whatsapp-marketing"
+      icon: "https://images.pexels.com/photos/2773940/pexels-photo-2773940.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Reach your customers directly with personalized WhatsApp campaigns.",
+      url: "/whatsapp"
     },
     {
       title: "Free Website",
-      icon: "https://uptoskills.com/wp-content/uploads/2024/04/what-is-web-design.webp",
-      description: "Basic website development services at no cost, perfect for startups and small businesses starting their online journey.",
-      url: "/services/free-website"
+      icon: "https://images.pexels.com/photos/6476584/pexels-photo-6476584.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Basic websites for startups and small businesses to establish their online presence.",
+      url: "/freewebserv"
     },
     {
       title: "SEO Services",
-      icon: "https://onlinegurukul.org/storage/uploads/1658492516-dm.jpeg",
-      description: "Comprehensive SEO solutions including keyword research, on-page optimization, and content strategy to improve rankings.",
-      url: "/services/seo"
+      icon: "https://images.pexels.com/photos/3861968/pexels-photo-3861968.jpeg?auto=compress&cs=tinysrgb&w=600",
+      description: "Improve your search engine visibility with targeted SEO solutions.",
+      url: "/seo"
     }
   ];
+  
 
   return (
     <section className="bg-gray-200 px-2 py-8">
@@ -92,11 +126,14 @@ export default function ServicesSection() {
           What We Do?
         </h2>
 
-        <div className="overflow-x-auto pb-4">
+        <div
+          ref={scrollContainerRef}
+          className="overflow-x-auto pb-4 scrollbar-hide"
+        >
           <ul className="inline-flex space-x-6 px-4">
             {services.map((service, index) => (
               <li key={index} className="flex-none w-64">
-                <a 
+                <a
                   href={service.url}
                   className="block rounded-lg bg-white p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 transform h-[350px] flex flex-col"
                 >

@@ -1,17 +1,22 @@
-import React from 'react';
 import Link from 'next/link';
 
-const Card = ({ className = '', ...props }) => {
+const Card = ({ className = '', children, ...props }) => {
   return (
     <div
       className={`bg-white rounded-lg border border-gray-200 shadow-sm ${className}`}
       {...props}
-    />
+    >
+      {children}
+    </div>
   );
 };
 
-const CardContent = ({ className = '', ...props }) => {
-  return <div className={`p-6 ${className}`} {...props} />;
+const CardContent = ({ className = '', children, ...props }) => {
+  return (
+    <div className={`p-6 ${className}`} {...props}>
+      {children}
+    </div>
+  );
 };
 
 const SingleBlogPost = () => {
@@ -25,11 +30,13 @@ const SingleBlogPost = () => {
       
       <p class="mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       
-      <p class="mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>`,
+      <p class="mb-4">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    `,
     author: "Andrea William",
     date: "21 Jan 2023",
     category: "Business",
-    image: "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image:
+      "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     readTime: "5 min read"
   };
 
@@ -37,27 +44,25 @@ const SingleBlogPost = () => {
     {
       id: 1,
       title: "The Future of AI in Business",
-      image: "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "15 Jan 2023"
     },
     {
       id: 2,
       title: "Understanding Blockchain Technology",
-      image: "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "18 Jan 2023"
     },
     {
       id: 3,
       title: "Cybersecurity Best Practices",
-      image: "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       date: "20 Jan 2023"
     }
   ];
-
-  // const categories = [
-  //   "Technology", "Business", "AI", "Development", 
-  //   "Design", "Marketing", "Innovation", "Startups"
-  // ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -92,7 +97,7 @@ const SingleBlogPost = () => {
               </div>
 
               {/* Post Content */}
-              <div 
+              <div
                 className="prose prose-lg max-w-none"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
@@ -116,9 +121,7 @@ const SingleBlogPost = () => {
                     />
                     <div>
                       <h3 className="font-medium text-gray-900 hover:text-blue-600 transition">
-                        <Link href={`/blog/${post.id}`}>
-                          {post.title}
-                        </Link>
+                        <Link href={`/blog/${post.id}`}>{post.title}</Link>
                       </h3>
                       <p className="text-sm text-gray-500">{post.date}</p>
                     </div>
@@ -127,28 +130,16 @@ const SingleBlogPost = () => {
               </div>
             </CardContent>
           </Card>
-
-          {/* Categories */}
-          {/* <Card>
-            <CardContent>
-              <h2 className="text-xl font-bold mb-4">Categories</h2>
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category, index) => (
-                  <Link 
-                    key={index} 
-                    href={`/category/${category.toLowerCase()}`}
-                    className="px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-full text-sm text-gray-700 transition"
-                  >
-                    {category}
-                  </Link>
-                ))}
-              </div>
-            </CardContent>
-          </Card> */}
         </div>
       </div>
     </div>
   );
 };
+
+// This function tells Next.js which blog paths to pre-render at build time
+export async function generateStaticParams() {
+  // Since we have one example post, we return that ID as a parameter.
+  return [{ blogid: "1" }];
+}
 
 export default SingleBlogPost;

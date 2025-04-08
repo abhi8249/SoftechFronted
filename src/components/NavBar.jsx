@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const QuoteForm = () => {
   const handleSubmit = (e) => {
@@ -149,10 +149,14 @@ const NavBar = () => {
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
-            src="/api/placeholder/32/32"
+            src={
+              new URL("../images/imgpsh_fullsize_anim.jpeg", import.meta.url)
+                .href
+            }
             className="h-8"
             alt="Company Logo"
           />
+
           <span className="text-white text-2xl font-semibold whitespace-nowrap">
             SoftTechBharat
           </span>
@@ -300,7 +304,9 @@ const NavBar = () => {
                     currentPath === "/webdevelopment" ? "bg-blue-600" : ""
                   }`}
                 >
-                  <div className="font-semibold">E-commerce Website Development</div>
+                  <div className="font-semibold">
+                    E-commerce Website Development
+                  </div>
                   <span className="text-sm text-white">
                     Connect with third-party tools that you're already using.
                   </span>

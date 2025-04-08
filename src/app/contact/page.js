@@ -1,8 +1,38 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 
-
 export default function Index() {
+  const locations = [
+    {
+      name: "Bhubaneswar",
+      address:
+        "Plot 731, ShyamPur, Infront of Sum Hospital, Bhubaneswar,odisha,pin-751003",
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.3346174034796!2d85.76811608544068!3d20.286412164360236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190803f81ab1f7%3A0x7a9636d00c0cb2d6!2sOdisha%20Institute%20of%20Computer%20Application!5e0!3m2!1sen!2sin!4v1734625937285!5m2!1sen!2sin",
+    },
+    {
+      name: "Sambalpur",
+      address:
+        "Govind tola Near Rani Sakti mandir, Dhanu pali, Samblapur, Odisha,pin-768001",
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3713.8236615657647!2d83.9836332761424!3d21.436175073659065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a211447caef6dab%3A0xa84df9aa8b7e9648!2sSankar%20Math!5e0!3m2!1sen!2sin!4v1744092525788!5m2!1sen!2sin",
+    },
+    {
+      name: "Anugul",
+      address: "At- Bypass road, Talchel town ,Anugul, Odisha,pin-759107",
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7452.007933670317!2d85.22284668156468!3d20.95235584294021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a18b5cb1b16da71%3A0x1559a6d1cf1fd7f7!2sTalcher%20Town%2C%20Odisha%20759107!5e0!3m2!1sen!2sin!4v1744092763250!5m2!1sen!2sin",
+    },
+    {
+      name: "Ganjam",
+      address: "Khallikote, Ganjam, Odisha,pin-761030",
+      mapSrc:
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7516.926686466317!2d85.07734999575477!3d19.607479183573865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a180499b7fc65f3%3A0xc67b64a82a18ca5e!2sKhallikot%2C%20Odisha!5e0!3m2!1sen!2sin!4v1744092814348!5m2!1sen!2sin",
+    },
+  ];
+
+  const [selectedLocation, setSelectedLocation] = useState(locations[0]);
+
   const [formData, setFormData] = useState({
     name: "",
     street: "",
@@ -34,17 +64,43 @@ export default function Index() {
   };
 
   return (
-    <div className="bg-white from-gray-800 to-gray-900 min-h-screen py-12 mx-auto w-[70%]">
-<h1 className="text-center text-4xl font-semibold m-4">Contact US</h1>
+    <div className="bg-white min-h-screen py-12 mx-auto w-[90%]">
+      <h1 className="text-center text-4xl font-semibold mb-8">Contact Us</h1>
+
+      {/* Location Selector */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        {locations.map((loc) => (
+          <button
+            key={loc.name}
+            onClick={() => setSelectedLocation(loc)}
+            className={`px-6 py-2 rounded-full text-sm font-medium shadow transition-all ${
+              selectedLocation.name === loc.name
+                ? "bg-yellow-400 text-black"
+                : "bg-gray-200 text-gray-700 hover:bg-yellow-200"
+            }`}
+          >
+            {loc.name}
+          </button>
+        ))}
+      </div>
+
       <div className="grid md:grid-cols-2 items-center overflow-hidden shadow-lg rounded-3xl max-w-6xl mx-auto bg-white">
+        {/* Form Section */}
         <div className="p-8 bg-gray-900">
           <h2 className="text-3xl font-bold text-white">
             Get In <span className="text-yellow-400">Touch</span>
           </h2>
           <p className="text-sm text-gray-300 mt-4 leading-relaxed">
-            Have a specific inquiry or looking to explore new opportunities?
-            Our experienced team is ready to engage with you.
+            Have a specific inquiry or looking to explore new opportunities? Our
+            experienced team is ready to engage with you.
           </p>
+
+          {/* Selected Location Address */}
+          <p className="text-sm text-gray-400 mt-2">
+            <span className="font-semibold text-yellow-400">Location:</span>{" "}
+            {selectedLocation.address}
+          </p>
+
           <form onSubmit={handleSubmit}>
             <div className="space-y-4 mt-8">
               <input
@@ -124,9 +180,10 @@ export default function Index() {
           </form>
         </div>
 
+        {/* Map Section */}
         <div className="h-full">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.3346174034796!2d85.76811608544068!3d20.286412164360236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190803f81ab1f7%3A0x7a9636d00c0cb2d6!2sOdisha%20Institute%20of%20Computer%20Application!5e0!3m2!1sen!2sin!4v1734625937285!5m2!1sen!2sin"
+            src={selectedLocation.mapSrc}
             width="100%"
             height="100%"
             allowFullScreen=""

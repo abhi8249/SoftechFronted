@@ -13,7 +13,12 @@ const Footer = () => {
                   <div className="flex items-center space-x-2 text-2xl font-medium">
                     <span>
                       <img
-                        src="https://img.freepik.com/free-vector/bird-colorful-logo-gradient-vector_343694-1365.jpg?t=st=1734790651~exp=1734794251~hmac=cb774d44df4fe1ea7bc84156bf28e3657b6dcbc2a6aca45d585dd80cbe7e7d71&w=826"
+                        src={
+                          new URL(
+                            "../images/imgpsh_fullsize_anim.jpeg",
+                            import.meta.url
+                          ).href
+                        }
                         alt="AI Logo"
                         width="64"
                         height="64"
